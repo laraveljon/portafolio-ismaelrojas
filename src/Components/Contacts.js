@@ -1,20 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 import emailjs from "emailjs-com";
+import { useForm } from "react-hook-form";
+
 const Contacts = () => {
 
+    const [successMessage, setSuccessMessage] = useState("");
+    const{ register,handleSubmit, errors} = useForm();
     const serviceID = "service_ID";
     const templateID = "template_ID";
     const userID = "user_fdOOk6qJk0tHX9xRJrUBi";
+
+
+    const onSubmit = (data, r) => {
+        sendEmail(
+          serviceID,
+          templateID,
+          {
+            name: data.name,
+            phone: data.phone,
+            email: data.email,
+            subject: data.subject,
+            description: data.description
+          },
+          userID
+        )
+        r.target.reset();
+      }
 
     const sendEmail = (e) =>{
         e.preventDefault();
     
         emailjs.sendForm(serviceID, templateID, e.target, userID)
-          .then((result) => {
-              console.log(result.text);
-          }, (error) => {
-              console.log(error.text);
-          });
+         .then(() => {
+        setSuccessMessage("Form sent successfully! I'll contact you as soon as possible.");
+      }).catch(err => console.error(`Something went wrong ${err}`));
       }
 
     return (
@@ -22,6 +41,7 @@ const Contacts = () => {
         <div className="text-center">
             <h1>contact me</h1>
              <p>Please fill out the form and describe you project needs and I'll contact you as soon as possible.</p>
+             <span className="success-message">{successMessage}</span>
         </div>
         <div className="container">
         <form onSubmit={sendEmail}>
