@@ -11,6 +11,7 @@ import Portafolio from './Components/Portafolio';
 import Testimonials from './Components/Testimonials'
 // import Contacts from './Components/Contacts'
 import ContactsV2 from './Components/Contacts'
+import Footer from './Components/Footer'
 function App() {
   return (
     <div>
@@ -43,6 +44,7 @@ function App() {
      <Portafolio />
      <Testimonials/>
      <ContactsV2 />
+     <Footer />
     </div>
      
   );

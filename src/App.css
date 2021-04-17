@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
-
+/**/
 :root {
   --primary-white: #ffffff;
   --primary-light-grey: #f4f4f4;
@@ -59,7 +59,7 @@ nav ul li {
  }
 }
 
-.navbar-nav > li > a.active,  .navbar-nav > li > a.active:focus {
+.navbar-nav > li > a.active,  .navbar-nav > li > a:focus {
   border-top: 0.1875rem solid var(--primary-orange);
 }
 
@@ -75,7 +75,7 @@ nav ul li {
   background: url(wall-and-laptop-background.jpg) no-repeat;
   background-size: cover;
   background-position: center;
-  height: 90vh;
+  height: 100vh;
 }
 
 .main-info {
@@ -95,12 +95,6 @@ nav ul li {
 .main-info h1 {
   color: var(--primary-orange);
   text-transform: uppercase;
-}
-
-@media(max-width:768px){
-  .main-info h1{
-    font-size: 1.5rem !important;
-  }
 }
 
 /*-------- TYPED TEXT ---------------*/
@@ -150,30 +144,30 @@ nav ul li {
   }
 }
 
-/**************************** ABOUT ME ****************/
-.photo-wrap{
+/************************ ABOUT ME *********************************/
+.photo-wrap {
   display: flex;
-  justify-content:center ;
-  align-items:center ;
-}
-.profile-img{
-   width: 16rem;
-   border-radius: 50%;
-   padding: .3rem;
-   border:1px solid var(--primary-orange);
+  justify-content: center;
+  align-items: center;
 }
 
-.about-heading{
+.profile-img {
+  width: 16rem;
+  border-radius: 50%;
+  padding: .3rem;
+  border: 1px solid var(--primary-orange);
+}
+
+.about-heading {
   color: var(--primary-orange);
   text-transform: uppercase;
 }
 
-@media(max-width: 466px){
-  .profile-img{
-    width: 10rem ;
+@media(max-width: 468px) {
+  .profile-img {
+    width: 10rem;
   }
 }
-
 
 /************************ SERVICES *********************************/
 .services {
@@ -182,7 +176,7 @@ nav ul li {
   background: var(--primary-light-grey);
 }
 
- .services h1 {
+.services h1 {
   color: var(--primary-dark);
   text-transform: uppercase;
 }
@@ -375,6 +369,10 @@ nav ul li {
   cursor: pointer;
 }
 
+.popupbox-wrapper {
+  margin-top: 7rem;
+}
+
 /*------------ OVERFLOW BOX ------------------*/
 .portfolio-image-popupbox {
   width: 45rem;
@@ -415,7 +413,7 @@ nav ul li {
     }
   }
 
-  /************************ TESTIMONIALS *********************************/
+/************************ TESTIMONIALS *********************************/
 .testimonials {
   background-image: url(testimonials-bg.jpg);
   background-size: cover;
@@ -601,3 +599,23 @@ textarea.form-control {
 .footer p {
   margin-bottom: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
