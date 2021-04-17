@@ -9,8 +9,8 @@ import Services from './Components/Services';
 import Experience from './Components/Experience';
 import Portafolio from './Components/Portafolio';
 import Testimonials from './Components/Testimonials'
-import Contacts from './Components/Contacts'
-
+// import Contacts from './Components/Contacts'
+import ContactsV2 from './Components/Contacts'
 function App() {
   return (
     <div>
@@ -42,7 +42,7 @@ function App() {
       <Experience />
      <Portafolio />
      <Testimonials/>
-     <Contacts />
+     <ContactsV2 />
     </div>
      
   );
